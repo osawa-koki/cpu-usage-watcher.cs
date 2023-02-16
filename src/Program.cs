@@ -14,7 +14,7 @@ class Program
     while (true)
     {
       // CPU使用率を取得する
-      var cpuUsage = GetTotalCpuUsage();
+      var cpuUsage = cpuCounter.NextValue();
 
       Console.WriteLine("CPU : {0:f}%", cpuUsage);
 
@@ -53,12 +53,6 @@ class Program
     // バイト配列のSHA256ハッシュ値を計算
     var hashed = SHA512.HashData(buffer);
     Console.WriteLine($"SHA512 -> {BitConverter.ToString(hashed)}");
-  }
-
-  static float GetTotalCpuUsage()
-  {
-    // 現在の全体のCPU使用率を取得する
-    return cpuCounter.NextValue();
   }
 }
 
