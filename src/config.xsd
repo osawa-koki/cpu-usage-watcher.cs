@@ -21,6 +21,7 @@
                         <xsd:enumeration value="MD5" />
                         <xsd:enumeration value="SHA1" />
                         <xsd:enumeration value="SHA256" />
+                        <xsd:enumeration value="SHA384" />
                         <xsd:enumeration value="SHA512" />
                       </xsd:restriction>
                     </xsd:simpleType>
