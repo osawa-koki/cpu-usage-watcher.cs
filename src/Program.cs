@@ -5,7 +5,7 @@ using System.Diagnostics;
 
 class Program
 {
-  private static PerformanceCounter cpuCounter = new("Processor", "% Processor Time", "_Total");
+  private static readonly PerformanceCounter cpuCounter = new("Processor", "% Processor Time", "_Total");
   static void Main()
   {
     // サブタスクを作成し、処理を開始する
