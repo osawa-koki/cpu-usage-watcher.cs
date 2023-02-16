@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="config.xsd">
+
+  <cpu_usage_threshold_percent>50</cpu_usage_threshold_percent>
+  <cpu_observing_interval_millisecond>5</cpu_observing_interval_millisecond>
+  <idle_time_millisecond>300</idle_time_millisecond>
+
+  <targets>
+    <target>
+      <value>http://www.google.com</value>
+      <algo>MD5</algo>
+    </target>
+    <target>
+      <value>http://www.yahoo.com</value>
+      <algo>SHA1</algo>
+    </target>
+    <target>
+      <value>http://www.bing.com</value>
+      <algo>SHA256</algo>
+    </target>
+    <target>
+      <value>http://www.ask.com</value>
+      <algo>SHA512</algo>
+    </target>
+  </targets>
+
+  </config>
