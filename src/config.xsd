@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="config">
+  <xsd:complexType>
+    <xsd:sequence>
+
+      <xsd:element name="cpu_usage_threshold_percent" type="xsd:nonNegativeInteger" />
+      <xsd:element name="cpu_observing_interval_millisecond" type="xsd:nonNegativeInteger" />
+      <xsd:element name="idle_time_millisecond" type="xsd:nonNegativeInteger" />
+
+      <xsd:element name="targets">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="target" minOccurs="0"  maxOccurs="unbounded">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="value" type="xsd:string" />
+                  <xsd:element name="algo">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="MD5" />
+                        <xsd:enumeration value="SHA1" />
+                        <xsd:enumeration value="SHA256" />
+                        <xsd:enumeration value="SHA384" />
+                        <xsd:enumeration value="SHA512" />
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:element>
+</xsd:schema>
